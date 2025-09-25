@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions & Offers - Bata Zimbabwe</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../assets/images/bata-logo.png" alt="Bata Zimbabwe" class="logo-img">
+                    <span class="logo-text">BATA</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="men-shoes.html">Men's Shoes</a></li>
+                                <li><a href="women-shoes.html">Women's Shoes</a></li>
+                                <li><a href="children-shoes.html">Children's Shoes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="store-locator.html" class="nav-link">Store Locator</a></li>
+                        <li class="nav-item"><a href="promotions.html" class="nav-link active">Promotions</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-extras">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Special Offers & Promotions</h1>
+            <p>Don't miss out on our amazing deals and exclusive offers</p>
+        </div>
+    </section>
+
+    <!-- Current Promotions -->
+    <section class="page-content">
+        <div class="container">
+            <!-- Hero Promotion -->
+            <div class="hero-promotion">
+                <div class="promo-content">
+                    <div class="promo-badge">LIMITED TIME</div>
+                    <h2>Back to School Special</h2>
+                    <p class="promo-description">Get up to 40% off on all children's school shoes. Prepare your kids for the new term with quality, durable footwear from Bata.</p>
+                    <div class="promo-details">
+                        <div class="discount-amount">UP TO 40% OFF</div>
+                        <div class="promo-validity">Valid until: March 31, 2024</div>
+                    </div>
+                    <button class="promo-cta-btn">Shop School Shoes</button>
+                </div>
+                <div class="promo-visual">
+                    <div class="promo-image" style="background: linear-gradient(135deg, #27ae60, #2ecc71); height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; border-radius: 15px;">👟</div>
+                </div>
+            </div>
+
+            <!-- Promotion Categories -->
+            <div class="promotion-categories">
+                <h2 class="section-title">Current Offers</h2>
+                <div class="promo-tabs">
+                    <button class="promo-tab active" data-tab="all">All Offers</button>
+                    <button class="promo-tab" data-tab="seasonal">Seasonal</button>
+                    <button class="promo-tab" data-tab="clearance">Clearance</button>
+                    <button class="promo-tab" data-tab="new-arrivals">New Arrivals</button>
+                </div>
+
+                <div class="promotions-grid">
+                    <!-- Seasonal Promotions -->
+                    <div class="promotion-card" data-category="seasonal">
+                        <div class="promo-card-header">
+                            <div class="promo-tag seasonal">SEASONAL</div>
+                            <div class="promo-date">Until Feb 28</div>
+                        </div>
+                        <div class="promo-card-content">
+                            <h3>Summer Comfort Sale</h3>
+                            <p>Beat the heat with our breathable summer collection. Sandals, canvas shoes, and lightweight sneakers.</p>
+                            <div class="promo-discount">25% OFF</div>
+                            <div class="promo-code">Code: SUMMER25</div>
+                        </div>
+                        <button class="promo-shop-btn">Shop Summer Collection</button>
+                    </div>
+
+                    <div class="promotion-card" data-category="clearance">
+                        <div class="promo-card-header">
+                            <div class="promo-tag clearance">CLEARANCE</div>
+                            <div class="promo-date">While stocks last</div>
+                        </div>
+                        <div class="promo-card-content">
+                            <h3>End of Season Clearance</h3>
+                            <p>Massive savings on selected styles. Quality footwear at unbeatable prices.</p>
+                            <div class="promo-discount">Up to 50% OFF</div>
+                            <div class="promo-code">In-store only</div>
+                        </div>
+                        <button class="promo-shop-btn">Find a Store</button>
+                    </div>
+
+                    <div class="promotion-card" data-category="new-arrivals">
+                        <div class="promo-card-header">
+                            <div class="promo-tag new">NEW ARRIVALS</div>
+                            <div class="promo-date">This month</div>
+                        </div>
+                        <div class="promo-card-content">
+                            <h3>New Collection Launch</h3>
+                            <p>Be the first to shop our latest designs. Modern styles with classic comfort.</p>
+                            <div class="promo-discount">15% OFF</div>
+                            <div class="promo-code">Code: NEW15</div>
+                        </div>
+                        <button class="promo-shop-btn">Shop New Arrivals</button>
+                    </div>
+
+                    <div class="promotion-card" data-category="seasonal">
+                        <div class="promo-card-header">
+                            <div class="promo-tag seasonal">CORPORATE</div>
+                            <div class="promo-date">Ongoing</div>
+                        </div>
+                        <div class="promo-card-content">
+                            <h3>Business Bulk Orders</h3>
+                            <p>Special pricing for corporate clients. Uniforms, safety shoes, and professional footwear.</p>
+                            <div class="promo-discount">Volume Discounts</div>
+                            <div class="promo-code">Contact Sales Team</div>
+                        </div>
+                        <button class="promo-shop-btn">Get Quote</button>
+                    </div>
+
+                    <div class="promotion-card" data-category="clearance">
+                        <div class="promo-card-header">
+                            <div class="promo-tag clearance">SPECIAL</div>
+                            <div class="promo-date">Limited time</div>
+                        </div>
+                        <div class="promo-card-content">
+                            <h3>Buy 2 Get 1 Free</h3>
+                            <p>Mix and match from our classic collection. Perfect for families or stocking up.</p>
+                            <div class="promo-discount">33% Savings</div>
+                            <div class="promo-code">Auto applied at checkout</div>
+                        </div>
+                        <button class="promo-shop-btn">Shop Classic Collection</button>
+                    </div>
+
+                    <div class="promotion-card" data-category="new-arrivals">
+                        <div class="promo-card-header">
+                            <div class="promo-tag new">LOYALTY</div>
+                            <div class="promo-date">Ongoing</div>
+                        </div>
+                        <div class="promo-card-content">
+                            <h3>Loyalty Rewards Program</h3>
+                            <p>Earn points with every purchase. Redeem for discounts and exclusive offers.</p>
+                            <div class="promo-discount">Earn & Save</div>
+                            <div class="promo-code">Join in-store</div>
+                        </div>
+                        <button class="promo-shop-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup for Exclusive Offers -->
+            <div class="newsletter-promo">
+                <div class="newsletter-content">
+                    <h2>Get Exclusive Offers</h2>
+                    <p>Subscribe to our newsletter and be the first to know about sales, new arrivals, and special promotions.</p>
+                    <form class="newsletter-signup">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe & Save</button>
+                    </form>
+                    <p class="newsletter-disclaimer">*Get 10% off your next purchase when you subscribe</p>
+                </div>
+                <div class="newsletter-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📧</div>
+                        <div>
+                            <h4>Early Access</h4>
+                            <p>Be first to shop sales</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎁</div>
+                        <div>
+                            <h4>Exclusive Offers</h4>
+                            <p>Subscriber-only discounts</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">👟</div>
+                        <div>
+                            <h4>New Arrivals</h4>
+                            <p>Latest styles first</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="promo-terms">
+                <h3>Terms & Conditions</h3>
+                <div class="terms-content">
+                    <div class="terms-grid">
+                        <div class="terms-section">
+                            <h4>General Terms</h4>
+                            <ul>
+                                <li>Offers valid while stocks last</li>
+                                <li>Cannot be combined with other promotions unless specified</li>
+                                <li>Discounts apply to marked items only</li>
+                                <li>Bata reserves the right to modify or cancel promotions</li>
+                            </ul>
+                        </div>
+                        <div class="terms-section">
+                            <h4>Online & In-Store</h4>
+                            <ul>
+                                <li>Some offers may be store-specific</li>
+                                <li>Online codes must be entered at checkout</li>
+                                <li>In-store promotions require physical visit</li>
+                                <li>Staff discount not applicable on promotional items</li>
+                            </ul>
+                        </div>
+                        <div class="terms-section">
+                            <h4>Return Policy</h4>
+                            <ul>
+                                <li>Standard return policy applies to promotional items</li>
+                                <li>Sale items may have modified return periods</li>
+                                <li>Original receipt required for all returns</li>
+                                <li>Items must be in original condition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bata Zimbabwe</h3>
+                    <p>Quality footwear for every step of your journey</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="store-locator.html">Find a Store</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#" class="privacy-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li>📞 +263 4 123 4567</li>
+                        <li>📧 info@bata.co.zw</li>
+                        <li>⏰ Mon-Sat: 8AM-6PM</li>
+                        <li>📍 Harare, Zimbabwe</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest offers</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bata Zimbabwe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+
+    <style>
+        /* Promotions page specific styles */
+        .hero-promotion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-promotion::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #e74c3c, #f39c12, #27ae60, #3498db);
+        }
+
+        .promo-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .promo-content h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .promo-description {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .promo-details {
+            margin-bottom: 2rem;
+        }
+
+        .discount-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+
+        .promo-validity {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .promo-cta-btn {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .promo-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.3);
+        }
+
+        .promotion-categories {
+            margin-bottom: 3rem;
+        }
+
+        .promo-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .promo-tab {
+            background: white;
+            border: 2px solid #ddd;
+            color: #666;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .promo-tab.active,
+        .promo-tab:hover {
+            background: #e74c3c;
+            border-color: #e74c3c;
+            color: white;
+        }
+
+        .promotions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .promotion-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .promotion-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .promo-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f9fa;
+        }
+
+        .promo-tag {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .promo-tag.seasonal {
+            background: #3498db;
+            color: white;
+        }
+
+        .promo-tag.clearance {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .promo-tag.new {
+            background: #27ae60;
+            color: white;
+        }
+
+        .promo-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .promo-card-content {
+            padding: 1.5rem;
+        }
+
+        .promo-card-content h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .promo-card-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .promo-discount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+
+        .promo-code {
+            background: #f8f9fa;
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            border: 1px dashed #ddd;
+            margin-bottom: 1rem;
+        }
+
+        .promo-shop-btn {
+            width: 100%;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .promo-shop-btn:hover {
+            background: #34495e;
+        }
+
+        .newsletter-promo {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .newsletter-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-content p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-signup {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-signup input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .newsletter-signup button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-signup button:hover {
+            background: #c0392b;
+        }
+
+        .newsletter-disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .newsletter-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 50%;
+        }
+
+        .benefit-item h4 {
+            margin-bottom: 0.25rem;
+        }
+
+        .benefit-item p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        .promo-terms {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .promo-terms h3 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .terms-section h4 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .terms-section li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+
+        .terms-section li:last-child {
+            border-bottom: none;
+        }
+
+        .terms-section li::before {
+            content: '✓';
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-promotion {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+
+            .promo-content h2 {
+                font-size: 2rem;
+            }
+
+            .promotions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-promo {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+
+            .newsletter-signup {
+                flex-direction: column;
+            }
+
+            .promo-tabs {
+                justify-content: center;
+            }
+
+            .terms-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        // Promotion tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const promoTabs = document.querySelectorAll('.promo-tab');
+            const promotionCards = document.querySelectorAll('.promotion-card');
+
+            promoTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetCategory = this.dataset.tab;
+
+                    // Update active tab
+                    promoTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter promotion cards
+                    promotionCards.forEach(card => {
+                        if (targetCategory === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const cardCategory = card.dataset.category;
+                            card.style.display = cardCategory === targetCategory ? 'block' : 'none';
+                        }
+                    });
+                });
+            });
+
+            // Newsletter signup
+            const newsletterForm = document.querySelector('.newsletter-signup');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    if (email) {
+                        showNotification('Thank you for subscribing! Check your email for your 10% discount code.');
+                        this.reset();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

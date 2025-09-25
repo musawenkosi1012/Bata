@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bata Zimbabwe</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../assets/images/bata-logo.png" alt="Bata Zimbabwe" class="logo-img">
+                    <span class="logo-text">BATA</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="men-shoes.html">Men's Shoes</a></li>
+                                <li><a href="women-shoes.html">Women's Shoes</a></li>
+                                <li><a href="children-shoes.html">Children's Shoes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="store-locator.html" class="nav-link">Store Locator</a></li>
+                        <li class="nav-item"><a href="promotions.html" class="nav-link">Promotions</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-extras">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help you with any questions or concerns</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="page-content">
+        <div class="container">
+            <!-- Contact Information Cards -->
+            <div class="contact-info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <h3>Phone Support</h3>
+                    <p>Speak with our customer service team</p>
+                    <div class="contact-details">
+                        <p><strong>Main Line:</strong> +263 4 123 4567</p>
+                        <p><strong>Customer Service:</strong> +263 4 123 4568</p>
+                        <p><strong>Hours:</strong> Mon-Fri 8AM-6PM, Sat 9AM-4PM</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p>Send us a message and we'll respond within 24 hours</p>
+                    <div class="contact-details">
+                        <p><strong>General Inquiries:</strong> info@bata.co.zw</p>
+                        <p><strong>Customer Service:</strong> support@bata.co.zw</p>
+                        <p><strong>Corporate Sales:</strong> corporate@bata.co.zw</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Head Office</h3>
+                    <p>Visit our main office in Harare</p>
+                    <div class="contact-details">
+                        <p><strong>Address:</strong> 123 First Street<br>Harare CBD, Zimbabwe</p>
+                        <p><strong>Postal:</strong> P.O. Box 1234, Harare</p>
+                        <p><strong>Hours:</strong> Mon-Fri 8AM-5PM</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">💬</div>
+                    <h3>Social Media</h3>
+                    <p>Follow us and send us a message</p>
+                    <div class="contact-details">
+                        <div class="social-contact-links">
+                            <a href="#" class="social-contact-link">📘 Facebook</a>
+                            <a href="#" class="social-contact-link">📷 Instagram</a>
+                            <a href="#" class="social-contact-link">🐦 Twitter</a>
+                            <a href="#" class="social-contact-link">💼 LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form and FAQ -->
+            <div class="contact-main-content">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="product">Product Information</option>
+                                <option value="order">Order Status</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="compliment">Compliment</option>
+                                <option value="corporate">Corporate Sales</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Please provide details about your inquiry..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for updates and special offers
+                            </label>
+                        </div>
+
+                        <!-- Simple CAPTCHA -->
+                        <div class="form-group captcha-group">
+                            <label for="captcha">Security Question: What is 5 + 3? *</label>
+                            <input type="number" id="captcha" name="captcha" required placeholder="Enter the answer">
+                        </div>
+
+                        <button type="submit" class="btn submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>What are your store hours?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Most of our stores are open Monday to Saturday from 8:00 AM to 6:00 PM, and Sunday from 9:00 AM to 4:00 PM. However, hours may vary by location. Please check our Store Locator for specific store hours.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>Do you offer shoe repair services?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! Selected Bata stores offer professional shoe repair services. This includes sole replacement, heel repair, and general maintenance. Contact your nearest store to confirm availability.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>What is your return policy?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer a 30-day return policy for unworn shoes in original packaging with receipt. Defective products can be returned within 90 days. Please bring your receipt and the original packaging.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>Do you offer corporate sales or bulk orders?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we provide corporate sales services for businesses, schools, and organizations. Contact our corporate sales team at corporate@bata.co.zw or call +263 4 123 4569 for special pricing and bulk order arrangements.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>How can I find my correct shoe size?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We recommend visiting our stores for professional fitting. Our trained staff can measure your feet and recommend the best size and style for your needs. We also have size guides available in-store and online.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>Do you have an online ordering system?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We're currently developing our online ordering system. For now, you can browse our products online and visit our stores to make purchases. Some locations offer phone orders for pickup.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Service Hours -->
+            <div class="service-hours-section">
+                <h2>Customer Service Hours</h2>
+                <div class="hours-grid">
+                    <div class="hours-item">
+                        <h4>Phone Support</h4>
+                        <div class="hours-details">
+                            <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
+                            <p><strong>Saturday:</strong> 9:00 AM - 4:00 PM</p>
+                            <p><strong>Sunday:</strong> Closed</p>
+                        </div>
+                    </div>
+                    <div class="hours-item">
+                        <h4>Email Support</h4>
+                        <div class="hours-details">
+                            <p><strong>Response Time:</strong> Within 24 hours</p>
+                            <p><strong>Monday - Friday:</strong> Same day response</p>
+                            <p><strong>Weekends:</strong> Next business day</p>
+                        </div>
+                    </div>
+                    <div class="hours-item">
+                        <h4>Live Chat</h4>
+                        <div class="hours-details">
+                            <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
+                            <p><strong>Saturday:</strong> 10:00 AM - 2:00 PM</p>
+                            <p><strong>Sunday:</strong> Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bata Zimbabwe</h3>
+                    <p>Quality footwear for every step of your journey</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="store-locator.html">Find a Store</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#" class="privacy-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li>📞 +263 4 123 4567</li>
+                        <li>📧 info@bata.co.zw</li>
+                        <li>⏰ Mon-Sat: 8AM-6PM</li>
+                        <li>📍 Harare, Zimbabwe</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest offers</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bata Zimbabwe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+
+    <style>
+        /* Contact page specific styles */
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .contact-details {
+            margin-top: 1rem;
+            text-align: left;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .social-contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .social-contact-link {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-contact-link:hover {
+            color: #e74c3c;
+        }
+
+        .contact-main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-form-section,
+        .faq-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-section h2,
+        .faq-section h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .captcha-group {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+
+        .submit-btn {
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 1rem;
+        }
+
+        .faq-list {
+            space-y: 1rem;
+        }
+
+        .faq-item {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+
+        .faq-question h4 {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #e74c3c;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1rem;
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            margin: 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .service-hours-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-hours-section h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .hours-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .hours-item h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .hours-details p {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        // FAQ toggle functionality
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            const allFaqItems = document.querySelectorAll('.faq-item');
+            allFaqItems.forEach(item => item.classList.remove('active'));
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Contact form CAPTCHA validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const captchaInput = document.getElementById('captcha');
+            const captchaValue = parseInt(captchaInput.value);
+            
+            if (captchaValue !== 8) {
+                e.preventDefault();
+                showNotification('Please answer the security question correctly.', 'error');
+                captchaInput.focus();
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>

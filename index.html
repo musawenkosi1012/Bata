@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bata Zimbabwe - Step Forward in Style</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/images/bata-logo.png" alt="Bata Zimbabwe" class="logo-img">
+                    <span class="logo-text">BATA</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="pages/men-shoes.html">Men's Shoes</a></li>
+                                <li><a href="pages/women-shoes.html">Women's Shoes</a></li>
+                                <li><a href="pages/children-shoes.html">Children's Shoes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="pages/about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="pages/store-locator.html" class="nav-link">Store Locator</a></li>
+                        <li class="nav-item"><a href="pages/promotions.html" class="nav-link">Promotions</a></li>
+                        <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-extras">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slideshow -->
+    <section class="hero">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1>Step Forward in Style</h1>
+                    <p>Discover Bata's latest collection of premium footwear designed for the modern Zimbabwean lifestyle</p>
+                    <button class="cta-btn">Shop Now</button>
+                </div>
+                <div class="slide-bg" style="background: linear-gradient(135deg, #2c3e50, #3498db);"></div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Back to School Campaign</h1>
+                    <p>Get your children ready for school with our durable and comfortable school shoes</p>
+                    <button class="cta-btn">View Collection</button>
+                </div>
+                <div class="slide-bg" style="background: linear-gradient(135deg, #27ae60, #2ecc71);"></div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Professional Excellence</h1>
+                    <p>Step into success with our premium business and formal footwear collection</p>
+                    <button class="cta-btn">Explore Now</button>
+                </div>
+                <div class="slide-bg" style="background: linear-gradient(135deg, #8e44ad, #9b59b6);"></div>
+            </div>
+        </div>
+        <div class="slide-controls">
+            <button class="prev-btn" id="prevSlide">❮</button>
+            <button class="next-btn" id="nextSlide">❯</button>
+        </div>
+        <div class="slide-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Collections</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="1">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Men's Business Shoes</h3>
+                        <p class="price">$89.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-img women-shoes"></div>
+                        <button class="add-to-cart" data-product-id="2">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Women's Casual Sneakers</h3>
+                        <p class="price">$69.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-img children-shoes"></div>
+                        <button class="add-to-cart" data-product-id="3">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Children's School Shoes</h3>
+                        <p class="price">$45.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Banner -->
+    <section class="promotions-banner">
+        <div class="container">
+            <div class="promotion-content">
+                <h2>Special Offers</h2>
+                <p>Get up to 30% off on selected items. Limited time offer!</p>
+                <a href="pages/promotions.html" class="promo-btn">View All Offers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Modal -->
+    <div class="modal" id="newsletterModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Welcome to Bata Zimbabwe!</h2>
+            <p>Subscribe to our newsletter and get 15% off your first purchase</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Get 15% Off</button>
+            </form>
+            <p class="modal-disclaimer">*Valid for first-time subscribers only</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bata Zimbabwe</h3>
+                    <p>Quality footwear for every step of your journey</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/store-locator.html">Find a Store</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                        <li><a href="#" class="privacy-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li>📞 +263 4 123 4567</li>
+                        <li>📧 info@bata.co.zw</li>
+                        <li>⏰ Mon-Sat: 8AM-6PM</li>
+                        <li>📍 Harare, Zimbabwe</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest offers</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bata Zimbabwe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <button class="cookie-accept" id="acceptCookies">Accept</button>
+            <button class="cookie-decline" id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be populated by JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

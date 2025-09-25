@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Shoes - Bata Zimbabwe</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../assets/images/bata-logo.png" alt="Bata Zimbabwe" class="logo-img">
+                    <span class="logo-text">BATA</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link active">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="men-shoes.html">Men's Shoes</a></li>
+                                <li><a href="women-shoes.html">Women's Shoes</a></li>
+                                <li><a href="children-shoes.html">Children's Shoes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="store-locator.html" class="nav-link">Store Locator</a></li>
+                        <li class="nav-item"><a href="promotions.html" class="nav-link">Promotions</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-extras">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Men's Shoes</h1>
+            <p>Discover our premium collection of men's footwear - from business formal to casual comfort</p>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+        <div class="container">
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="search">Search:</label>
+                    <input type="text" class="search-box" placeholder="Search products..." name="search">
+                </div>
+                <div class="filter-group">
+                    <label for="category">Category:</label>
+                    <select name="category">
+                        <option value="">All Categories</option>
+                        <option value="formal">Formal</option>
+                        <option value="casual">Casual</option>
+                        <option value="sports">Sports</option>
+                        <option value="boots">Boots</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price">Price Range:</label>
+                    <select name="price">
+                        <option value="">All Prices</option>
+                        <option value="0-50">$0 - $50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100-150">$100 - $150</option>
+                        <option value="150">$150+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="size">Size:</label>
+                    <select name="size">
+                        <option value="">All Sizes</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="page-content">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Business/Formal Shoes -->
+                <div class="product-card" data-category="formal" data-sizes="8,9,10,11">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="101">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Classic Oxford Business Shoes</h3>
+                        <p class="price">$89.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="description">Premium leather Oxford shoes perfect for business meetings and formal occasions.</p>
+                        <div class="sizes">Available sizes: 8, 9, 10, 11</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="formal" data-sizes="7,8,9,10,11,12">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="102">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Derby Formal Leather Shoes</h3>
+                        <p class="price">$79.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="description">Comfortable Derby-style shoes with premium leather construction.</p>
+                        <div class="sizes">Available sizes: 7, 8, 9, 10, 11, 12</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="formal" data-sizes="8,9,10,11">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="103">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Brogue Wing-tip Shoes</h3>
+                        <p class="price">$99.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="description">Elegant brogue design with decorative perforations and wing-tip styling.</p>
+                        <div class="sizes">Available sizes: 8, 9, 10, 11</div>
+                    </div>
+                </div>
+
+                <!-- Casual Shoes -->
+                <div class="product-card" data-category="casual" data-sizes="7,8,9,10,11,12">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="104">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Comfort Casual Loafers</h3>
+                        <p class="price">$59.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="description">Slip-on loafers with cushioned insole for all-day comfort.</p>
+                        <div class="sizes">Available sizes: 7, 8, 9, 10, 11, 12</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="casual" data-sizes="8,9,10,11,12">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="105">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Canvas Sneakers</h3>
+                        <p class="price">$49.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="description">Breathable canvas sneakers perfect for casual outings and weekend wear.</p>
+                        <div class="sizes">Available sizes: 8, 9, 10, 11, 12</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="casual" data-sizes="7,8,9,10,11">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="106">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Suede Desert Boots</h3>
+                        <p class="price">$69.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="description">Classic suede desert boots with comfortable rubber sole.</p>
+                        <div class="sizes">Available sizes: 7, 8, 9, 10, 11</div>
+                    </div>
+                </div>
+
+                <!-- Sports Shoes -->
+                <div class="product-card" data-category="sports" data-sizes="7,8,9,10,11,12">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="107">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Athletic Running Shoes</h3>
+                        <p class="price">$79.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="description">Lightweight running shoes with advanced cushioning technology.</p>
+                        <div class="sizes">Available sizes: 7, 8, 9, 10, 11, 12</div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sports" data-sizes="8,9,10,11,12">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="108">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Cross Training Shoes</h3>
+                        <p class="price">$89.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="description">Versatile training shoes suitable for gym workouts and sports activities.</p>
+                        <div class="sizes">Available sizes: 8, 9, 10, 11, 12</div>
+                    </div>
+                </div>
+
+                <!-- Boots -->
+                <div class="product-card" data-category="boots" data-sizes="8,9,10,11,12">
+                    <div class="product-image">
+                        <div class="placeholder-img men-shoes"></div>
+                        <button class="add-to-cart" data-product-id="109">Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Leather Work Boots</h3>
+                        <p class="price">$119.99</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="description">Durable leather work boots with steel toe protection and slip-resistant sole.</p>
+                        <div class="sizes">Available sizes: 8, 9, 10, 11, 12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bata Zimbabwe</h3>
+                    <p>Quality footwear for every step of your journey</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="store-locator.html">Find a Store</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#" class="privacy-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li>📞 +263 4 123 4567</li>
+                        <li>📧 info@bata.co.zw</li>
+                        <li>⏰ Mon-Sat: 8AM-6PM</li>
+                        <li>📍 Harare, Zimbabwe</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest offers</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bata Zimbabwe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be populated by JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
