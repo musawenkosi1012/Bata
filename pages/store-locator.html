@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Locator - Bata Zimbabwe</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS for interactive map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../assets/images/bata-logo.png" alt="Bata Zimbabwe" class="logo-img">
+                    <span class="logo-text">BATA</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="men-shoes.html">Men's Shoes</a></li>
+                                <li><a href="women-shoes.html">Women's Shoes</a></li>
+                                <li><a href="children-shoes.html">Children's Shoes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="store-locator.html" class="nav-link active">Store Locator</a></li>
+                        <li class="nav-item"><a href="promotions.html" class="nav-link">Promotions</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-extras">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Find a Bata Store</h1>
+            <p>Locate your nearest Bata store across Zimbabwe</p>
+        </div>
+    </section>
+
+    <!-- Store Locator Content -->
+    <section class="page-content">
+        <div class="container">
+            <!-- Search Bar -->
+            <div class="store-search">
+                <div class="search-container">
+                    <input type="text" id="locationSearch" placeholder="Enter city or area name..." class="location-input">
+                    <button id="searchStores" class="search-stores-btn">Find Stores</button>
+                    <button id="useLocation" class="location-btn">📍 Use My Location</button>
+                </div>
+            </div>
+
+            <!-- Map and Store List Container -->
+            <div class="locator-content">
+                <!-- Interactive Map -->
+                <div class="map-container">
+                    <div id="storeMap" class="store-map"></div>
+                </div>
+
+                <!-- Store List -->
+                <div class="store-list-container">
+                    <h3>Store Locations</h3>
+                    <div class="stores-filter">
+                        <select id="cityFilter">
+                            <option value="">All Cities</option>
+                            <option value="harare">Harare</option>
+                            <option value="bulawayo">Bulawayo</option>
+                            <option value="mutare">Mutare</option>
+                            <option value="gweru">Gweru</option>
+                            <option value="masvingo">Masvingo</option>
+                        </select>
+                    </div>
+                    <div id="storesList" class="stores-list">
+                        <!-- Store items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Store Information Cards -->
+            <div class="store-cards-grid" id="storeCardsGrid">
+                <!-- Store cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bata Zimbabwe</h3>
+                    <p>Quality footwear for every step of your journey</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="store-locator.html">Find a Store</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#" class="privacy-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li>📞 +263 4 123 4567</li>
+                        <li>📧 info@bata.co.zw</li>
+                        <li>⏰ Mon-Sat: 8AM-6PM</li>
+                        <li>📍 Harare, Zimbabwe</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Stay updated with our latest offers</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bata Zimbabwe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Leaflet JavaScript for interactive map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <style>
+        /* Store Locator specific styles */
+        .store-search {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .location-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .search-stores-btn,
+        .location-btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-stores-btn {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .search-stores-btn:hover {
+            background: #c0392b;
+        }
+
+        .location-btn {
+            background: #3498db;
+            color: white;
+        }
+
+        .location-btn:hover {
+            background: #2980b9;
+        }
+
+        .locator-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .map-container {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .store-map {
+            height: 500px;
+            width: 100%;
+        }
+
+        .store-list-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .stores-filter {
+            margin-bottom: 1rem;
+        }
+
+        .stores-filter select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .stores-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .store-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .store-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .store-item:last-child {
+            border-bottom: none;
+        }
+
+        .store-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .store-address {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .store-hours {
+            color: #27ae60;
+            font-size: 0.8rem;
+        }
+
+        .store-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .store-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .store-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .store-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .store-icon {
+            background: #e74c3c;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .store-info h4 {
+            color: #2c3e50;
+            margin-bottom: 0.25rem;
+        }
+
+        .store-city {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .store-details {
+            margin-bottom: 1rem;
+        }
+
+        .store-details p {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .store-contact {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .call-btn {
+            background: #27ae60;
+            color: white;
+        }
+
+        .call-btn:hover {
+            background: #229954;
+        }
+
+        .directions-btn {
+            background: #3498db;
+            color: white;
+        }
+
+        .directions-btn:hover {
+            background: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .search-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .location-input {
+                min-width: auto;
+            }
+
+            .locator-content {
+                grid-template-columns: 1fr;
+            }
+
+            .store-map {
+                height: 300px;
+            }
+
+            .store-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .store-contact {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <script>
+        // Store locations data
+        const storeLocations = [
+            {
+                id: 1,
+                name: "Bata Harare City Center",
+                city: "harare",
+                address: "123 First Street, Harare CBD",
+                phone: "+263 4 123 4567",
+                hours: "Mon-Sat: 8:00 AM - 6:00 PM, Sun: 9:00 AM - 4:00 PM",
+                lat: -17.8252,
+                lng: 31.0335,
+                services: ["Full Product Range", "Shoe Repair", "Gift Cards"]
+            },
+            {
+                id: 2,
+                name: "Bata Eastgate Mall",
+                city: "harare",
+                address: "Eastgate Shopping Mall, Harare",
+                phone: "+263 4 123 4568",
+                hours: "Mon-Sun: 9:00 AM - 8:00 PM",
+                lat: -17.8306,
+                lng: 31.0722,
+                services: ["Full Product Range", "Online Order Pickup"]
+            },
+            {
+                id: 3,
+                name: "Bata Bulawayo Main Street",
+                city: "bulawayo",
+                address: "456 Main Street, Bulawayo",
+                phone: "+263 9 123 4567",
+                hours: "Mon-Sat: 8:00 AM - 6:00 PM, Sun: Closed",
+                lat: -20.1506,
+                lng: 28.5847,
+                services: ["Full Product Range", "Shoe Repair", "Corporate Sales"]
+            },
+            {
+                id: 4,
+                name: "Bata Mutare Center",
+                city: "mutare",
+                address: "789 Herbert Chitepo Street, Mutare",
+                phone: "+263 20 123 4567",
+                hours: "Mon-Sat: 8:30 AM - 5:30 PM, Sun: Closed",
+                lat: -18.9664,
+                lng: 32.6707,
+                services: ["Full Product Range", "School Shoes Specialist"]
+            },
+            {
+                id: 5,
+                name: "Bata Gweru Plaza",
+                city: "gweru",
+                address: "321 Robert Mugabe Way, Gweru",
+                phone: "+263 54 123 4567",
+                hours: "Mon-Sat: 8:00 AM - 6:00 PM, Sun: 10:00 AM - 2:00 PM",
+                lat: -19.4543,
+                lng: 29.8154,
+                services: ["Full Product Range", "Gift Cards"]
+            },
+            {
+                id: 6,
+                name: "Bata Masvingo Outlet",
+                city: "masvingo",
+                address: "654 Josiah Tongogara Street, Masvingo",
+                phone: "+263 39 123 4567",
+                hours: "Mon-Sat: 8:00 AM - 5:00 PM, Sun: Closed",
+                lat: -20.0672,
+                lng: 30.8277,
+                services: ["Core Product Range", "Shoe Repair"]
+            }
+        ];
+
+        // Initialize map and store locator
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeStoreMap();
+            populateStoresList();
+            populateStoreCards();
+            initializeStoreSearch();
+        });
+
+        let map;
+        let markers = [];
+
+        function initializeStoreMap() {
+            // Initialize map centered on Zimbabwe
+            map = L.map('storeMap').setView([-19.0154, 29.1549], 6);
+
+            // Add tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Add markers for each store
+            storeLocations.forEach(store => {
+                const marker = L.marker([store.lat, store.lng])
+                    .addTo(map)
+                    .bindPopup(`
+                        <div class="map-popup">
+                            <h4>${store.name}</h4>
+                            <p><strong>Address:</strong> ${store.address}</p>
+                            <p><strong>Phone:</strong> ${store.phone}</p>
+                            <p><strong>Hours:</strong> ${store.hours}</p>
+                            <button onclick="getDirections(${store.lat}, ${store.lng})" class="directions-btn">Get Directions</button>
+                        </div>
+                    `);
+                
+                markers.push({ marker, store });
+            });
+        }
+
+        function populateStoresList() {
+            const storesList = document.getElementById('storesList');
+            storesList.innerHTML = '';
+
+            storeLocations.forEach(store => {
+                const storeItem = document.createElement('div');
+                storeItem.className = 'store-item';
+                storeItem.innerHTML = `
+                    <div class="store-name">${store.name}</div>
+                    <div class="store-address">${store.address}</div>
+                    <div class="store-hours">${store.hours.split(',')[0]}</div>
+                `;
+                
+                storeItem.addEventListener('click', () => {
+                    map.setView([store.lat, store.lng], 15);
+                    const marker = markers.find(m => m.store.id === store.id);
+                    if (marker) {
+                        marker.marker.openPopup();
+                    }
+                });
+
+                storesList.appendChild(storeItem);
+            });
+        }
+
+        function populateStoreCards() {
+            const storeCardsGrid = document.getElementById('storeCardsGrid');
+            storeCardsGrid.innerHTML = '';
+
+            storeLocations.forEach(store => {
+                const storeCard = document.createElement('div');
+                storeCard.className = 'store-card';
+                storeCard.innerHTML = `
+                    <div class="store-card-header">
+                        <div class="store-icon">🏪</div>
+                        <div class="store-info">
+                            <h4>${store.name}</h4>
+                            <div class="store-city">${store.city.charAt(0).toUpperCase() + store.city.slice(1)}</div>
+                        </div>
+                    </div>
+                    <div class="store-details">
+                        <p><strong>📍 Address:</strong> ${store.address}</p>
+                        <p><strong>📞 Phone:</strong> ${store.phone}</p>
+                        <p><strong>⏰ Hours:</strong> ${store.hours}</p>
+                        <p><strong>🛍️ Services:</strong> ${store.services.join(', ')}</p>
+                    </div>
+                    <div class="store-contact">
+                        <button class="contact-btn call-btn" onclick="callStore('${store.phone}')">📞 Call</button>
+                        <button class="contact-btn directions-btn" onclick="getDirections(${store.lat}, ${store.lng})">🗺️ Directions</button>
+                    </div>
+                `;
+
+                storeCardsGrid.appendChild(storeCard);
+            });
+        }
+
+        function initializeStoreSearch() {
+            const locationSearch = document.getElementById('locationSearch');
+            const searchStores = document.getElementById('searchStores');
+            const useLocation = document.getElementById('useLocation');
+            const cityFilter = document.getElementById('cityFilter');
+
+            searchStores.addEventListener('click', function() {
+                const searchTerm = locationSearch.value.toLowerCase();
+                filterStores(searchTerm);
+            });
+
+            locationSearch.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const searchTerm = locationSearch.value.toLowerCase();
+                    filterStores(searchTerm);
+                }
+            });
+
+            useLocation.addEventListener('click', function() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        const userLat = position.coords.latitude;
+                        const userLng = position.coords.longitude;
+                        
+                        // Find nearest store
+                        let nearestStore = null;
+                        let minDistance = Infinity;
+
+                        storeLocations.forEach(store => {
+                            const distance = calculateDistance(userLat, userLng, store.lat, store.lng);
+                            if (distance < minDistance) {
+                                minDistance = distance;
+                                nearestStore = store;
+                            }
+                        });
+
+                        if (nearestStore) {
+                            map.setView([nearestStore.lat, nearestStore.lng], 15);
+                            const marker = markers.find(m => m.store.id === nearestStore.id);
+                            if (marker) {
+                                marker.marker.openPopup();
+                            }
+                            showNotification(`Nearest store: ${nearestStore.name}`);
+                        }
+                    }, function() {
+                        showNotification('Unable to get your location', 'error');
+                    });
+                } else {
+                    showNotification('Geolocation is not supported by this browser', 'error');
+                }
+            });
+
+            cityFilter.addEventListener('change', function() {
+                const selectedCity = this.value;
+                filterStoresByCity(selectedCity);
+            });
+        }
+
+        function filterStores(searchTerm) {
+            if (!searchTerm) {
+                populateStoresList();
+                return;
+            }
+
+            const filteredStores = storeLocations.filter(store => 
+                store.name.toLowerCase().includes(searchTerm) ||
+                store.address.toLowerCase().includes(searchTerm) ||
+                store.city.toLowerCase().includes(searchTerm)
+            );
+
+            const storesList = document.getElementById('storesList');
+            storesList.innerHTML = '';
+
+            if (filteredStores.length === 0) {
+                storesList.innerHTML = '<div class="no-results">No stores found matching your search.</div>';
+                return;
+            }
+
+            filteredStores.forEach(store => {
+                const storeItem = document.createElement('div');
+                storeItem.className = 'store-item';
+                storeItem.innerHTML = `
+                    <div class="store-name">${store.name}</div>
+                    <div class="store-address">${store.address}</div>
+                    <div class="store-hours">${store.hours.split(',')[0]}</div>
+                `;
+                
+                storeItem.addEventListener('click', () => {
+                    map.setView([store.lat, store.lng], 15);
+                    const marker = markers.find(m => m.store.id === store.id);
+                    if (marker) {
+                        marker.marker.openPopup();
+                    }
+                });
+
+                storesList.appendChild(storeItem);
+            });
+        }
+
+        function filterStoresByCity(city) {
+            if (!city) {
+                populateStoresList();
+                return;
+            }
+
+            const filteredStores = storeLocations.filter(store => store.city === city);
+            
+            const storesList = document.getElementById('storesList');
+            storesList.innerHTML = '';
+
+            filteredStores.forEach(store => {
+                const storeItem = document.createElement('div');
+                storeItem.className = 'store-item';
+                storeItem.innerHTML = `
+                    <div class="store-name">${store.name}</div>
+                    <div class="store-address">${store.address}</div>
+                    <div class="store-hours">${store.hours.split(',')[0]}</div>
+                `;
+                
+                storeItem.addEventListener('click', () => {
+                    map.setView([store.lat, store.lng], 15);
+                    const marker = markers.find(m => m.store.id === store.id);
+                    if (marker) {
+                        marker.marker.openPopup();
+                    }
+                });
+
+                storesList.appendChild(storeItem);
+            });
+
+            // Center map on filtered city
+            if (filteredStores.length > 0) {
+                const bounds = L.latLngBounds(filteredStores.map(store => [store.lat, store.lng]));
+                map.fitBounds(bounds, { padding: [20, 20] });
+            }
+        }
+
+        function calculateDistance(lat1, lng1, lat2, lng2) {
+            const R = 6371; // Radius of the Earth in km
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLng = (lng2 - lng1) * Math.PI / 180;
+            const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                Math.sin(dLng/2) * Math.sin(dLng/2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            return R * c;
+        }
+
+        function callStore(phone) {
+            window.location.href = `tel:${phone}`;
+        }
+
+        function getDirections(lat, lng) {
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
