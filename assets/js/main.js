@@ -1,103 +1,273 @@
-// Main JavaScript file for Bata Zimbabwe Website
+/**
+ * BATA ZIMBABWE WEBSITE - SIMPLIFIED FOR BEGINNER DEVELOPERS
+ * 
+ * This JavaScript file contains basic functionality for the Bata Zimbabwe website.
+ * It's designed to be easy to understand and modify by beginner developers.
+ * 
+ * MAIN FEATURES:
+ * 1. Simple slideshow for hero section
+ * 2. Mobile navigation menu
+ * 3. Basic modal functionality
+ * 4. Simple form handling
+ * 
+ * Each function is clearly commented and uses simple, readable code patterns.
+ */
 
-// Initialize when DOM is loaded
+// Wait for the page to load completely before running JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    initializeSlideshow();
-    initializeNavigation();
-    initializeShoppingCart();
-    initializeModal();
-    initializeCookieBanner();
-    initializeProductFilters();
-    showModalOnFirstVisit();
+    console.log('Bata Zimbabwe website loaded successfully!');
+    
+    // Initialize all website features
+    initSimpleSlideshow();
+    initMobileMenu();
+    initModal();
+    initForms();
 });
 
-// Slideshow functionality
-function initializeSlideshow() {
+/**
+ * SLIDESHOW FUNCTIONALITY
+ * Simple slideshow for the hero section with previous/next buttons
+ */
+function initSimpleSlideshow() {
+    console.log('Initializing slideshow...');
+    
+    // Get all slides and buttons
     const slides = document.querySelectorAll('.slide');
-    const indicators = document.querySelectorAll('.indicator');
-    const prevBtn = document.getElementById('prevSlide');
-    const nextBtn = document.getElementById('nextSlide');
-    let currentSlide = 0;
-    let slideInterval;
-
-    if (slides.length === 0) return;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
+    const prevButton = document.getElementById('prevSlide');
+    const nextButton = document.getElementById('nextSlide');
+    
+    // If no slides found, exit function
+    if (slides.length === 0) {
+        console.log('No slides found');
+        return;
+    }
+    
+    let currentSlideIndex = 0; // Track which slide is currently shown
+    
+    // Function to show a specific slide
+    function showSlide(slideIndex) {
+        // Hide all slides
+        slides.forEach(function(slide) {
+            slide.classList.remove('active');
         });
-        indicators.forEach((indicator, i) => {
-            indicator.classList.toggle('active', i === index);
+        
+        // Show the selected slide
+        slides[slideIndex].classList.add('active');
+        currentSlideIndex = slideIndex;
+        
+        console.log('Showing slide:', slideIndex + 1);
+    }
+    
+    // Function to go to next slide
+    function goToNextSlide() {
+        let nextIndex = currentSlideIndex + 1;
+        
+        // If we're at the last slide, go back to the first
+        if (nextIndex >= slides.length) {
+            nextIndex = 0;
+        }
+        
+        showSlide(nextIndex);
+    }
+    
+    // Function to go to previous slide
+    function goToPreviousSlide() {
+        let prevIndex = currentSlideIndex - 1;
+        
+        // If we're at the first slide, go to the last
+        if (prevIndex < 0) {
+            prevIndex = slides.length - 1;
+        }
+        
+        showSlide(prevIndex);
+    }
+    
+    // Add click events to buttons
+    if (nextButton) {
+        nextButton.addEventListener('click', goToNextSlide);
+    }
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', goToPreviousSlide);
+    }
+    
+    // Show first slide initially
+    showSlide(0);
+    
+    // Auto-advance slides every 5 seconds
+    setInterval(goToNextSlide, 5000);
+}
+
+/**
+ * MOBILE MENU FUNCTIONALITY
+ * Simple toggle for mobile navigation menu
+ */
+function initMobileMenu() {
+    console.log('Initializing mobile menu...');
+    
+    const menuButton = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (!menuButton || !navMenu) {
+        console.log('Menu elements not found');
+        return;
+    }
+    
+    // Function to toggle menu open/closed
+    function toggleMenu() {
+        navMenu.classList.toggle('active');
+        
+        if (navMenu.classList.contains('active')) {
+            console.log('Menu opened');
+        } else {
+            console.log('Menu closed');
+        }
+    }
+    
+    // Add click event to menu button
+    menuButton.addEventListener('click', toggleMenu);
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        // Check if click was outside menu and button
+        if (!menuButton.contains(event.target) && !navMenu.contains(event.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+}
+
+/**
+ * MODAL FUNCTIONALITY
+ * Simple modal (popup) handling for newsletter signup
+ */
+function initModal() {
+    console.log('Initializing modal...');
+    
+    const modal = document.getElementById('newsletterModal');
+    const closeButton = document.getElementById('closeModal');
+    
+    if (!modal) {
+        console.log('Modal not found');
+        return;
+    }
+    
+    // Function to show modal
+    function showModal() {
+        modal.style.display = 'block';
+        console.log('Modal shown');
+    }
+    
+    // Function to hide modal
+    function hideModal() {
+        modal.style.display = 'none';
+        console.log('Modal hidden');
+    }
+    
+    // Show modal after 3 seconds (only once per session)
+    if (!sessionStorage.getItem('modalShown')) {
+        setTimeout(function() {
+            showModal();
+            sessionStorage.setItem('modalShown', 'true');
+        }, 3000);
+    }
+    
+    // Close modal when clicking X button
+    if (closeButton) {
+        closeButton.addEventListener('click', hideModal);
+    }
+    
+    // Close modal when clicking outside it
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            hideModal();
+        }
+    });
+}
+
+/**
+ * FORM HANDLING
+ * Simple form submission handling with basic validation
+ */
+function initForms() {
+    console.log('Initializing forms...');
+    
+    // Newsletter form in modal
+    const newsletterForm = document.getElementById('newsletterForm');
+    
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            const email = emailInput.value;
+            
+            // Simple email validation
+            if (email && email.includes('@')) {
+                alert('Thank you for subscribing! You will receive 15% off your first purchase.');
+                emailInput.value = ''; // Clear the input
+                document.getElementById('newsletterModal').style.display = 'none';
+                console.log('Newsletter subscription:', email);
+            } else {
+                alert('Please enter a valid email address.');
+            }
         });
-        currentSlide = index;
     }
-
-    function nextSlide() {
-        const next = (currentSlide + 1) % slides.length;
-        showSlide(next);
-    }
-
-    function prevSlide() {
-        const prev = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(prev);
-    }
-
-    function startAutoplay() {
-        slideInterval = setInterval(nextSlide, 5000);
-    }
-
-    function stopAutoplay() {
-        clearInterval(slideInterval);
-    }
-
-    // Event listeners
-    if (nextBtn) nextBtn.addEventListener('click', () => {
-        nextSlide();
-        stopAutoplay();
-        startAutoplay();
-    });
-
-    if (prevBtn) prevBtn.addEventListener('click', () => {
-        prevSlide();
-        stopAutoplay();
-        startAutoplay();
-    });
-
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            showSlide(index);
-            stopAutoplay();
-            startAutoplay();
+    
+    // Contact form (if exists)
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = contactForm.querySelector('#name').value;
+            const email = contactForm.querySelector('#email').value;
+            const message = contactForm.querySelector('#message').value;
+            
+            // Simple validation
+            if (name && email && email.includes('@') && message) {
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset(); // Clear all form fields
+                console.log('Contact form submitted:', { name, email, message });
+            } else {
+                alert('Please fill in all required fields.');
+            }
         });
-    });
-
-    // Start autoplay
-    startAutoplay();
-
-    // Pause on hover
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.addEventListener('mouseenter', stopAutoplay);
-        hero.addEventListener('mouseleave', startAutoplay);
     }
 }
 
-// Navigation functionality
-function initializeNavigation() {
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('nav-menu');
+/**
+ * UTILITY FUNCTIONS
+ * Helper functions that can be used throughout the website
+ */
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-        });
+// Simple function to show notifications
+function showNotification(message, type) {
+    type = type || 'info'; // Default to 'info' if no type specified
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'notification notification-' + type;
+    notification.textContent = message;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Remove after 3 seconds
+    setTimeout(function() {
+        document.body.removeChild(notification);
+    }, 3000);
+    
+    console.log('Notification shown:', message);
+}
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!menuToggle.contains(event.target) && !navMenu.contains(event.target)) {
-                navMenu.classList.remove('active');
-            }
-        });
+// Simple function to check if element is visible on screen
+function isElementVisible(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+}
+
+console.log('Bata Zimbabwe JavaScript loaded successfully!');
     }
 
     // Search functionality
